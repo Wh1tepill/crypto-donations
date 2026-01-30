@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Crypto Donations</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    :root {
+      color-scheme: dark light;
+      --bg: #050814;
+      --card-bg: #111827;
+      --accent: #6366f1;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+                   Roboto, sans-serif;
+      background: radial-gradient(circle at top, #1f2937 0, #020617 55%, #000 100%);
+      color: var(--text);
+      display: flex;
+      align-items: stretch;
+      justify-content: center;
+    }
+    main {
+      width: 100%;
+      max-width: 960px;
+      padding: 2rem 1rem 3rem;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    h1 {
+      margin: 0 0 0.5rem;
+      font-size: clamp(1.9rem, 4vw, 2.4rem);
+      letter-spacing: 0.03em;
+    }
+    .tagline {
+      margin: 0 0 0.75rem;
+      font-size: 0.95rem;
+      color: var(--muted);
+    }
+    .note {
+      margin: 0;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+    .note strong {
+      color: var(--accent);
+      font-weight: 600;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 1.25rem;
+    }
+    .card {
+      background: linear-gradient(145deg, #020617, #020617 40%, #030712 100%);
+      border-radius: 14px;
+      padding: 1rem 1rem 1.2rem;
+      border: 1px solid rgba(148, 163, 184, 0.15);
+      box-shadow:
+        0 18px 45px rgba(15, 23, 42, 0.9),
+        0 0 0 1px rgba(15, 23, 42, 0.9);
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+    }
+    .card-title {
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+    }
+    .network-pill {
+      font-size: 0.7rem;
+      padding: 0.1rem 0.45rem;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.4);
+      color: var(--muted);
+      white-space: nowrap;
+    }
+    .addr-label {
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+    .address {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+                   "Liberation Mono", "Courier New", monospace;
+      font-size: 0.8rem;
+      word-break: break-all;
+      background: rgba(15, 23, 42, 0.95);
+      border-radius: 8px;
+      padding: 0.5rem 0.6rem;
+      border: 1px solid rgba(55, 65, 81, 0.7);
+    }
+    .qr-wrap {
+      margin-top: 0.4rem;
+      display: flex;
+      justify-content: center;
+    }
+    .qr-wrap img {
+      width: 140px;
+      max-width: 100%;
+      border-radius: 10px;
+      border: 1px solid rgba(55, 65, 81, 0.9);
+      background: #020617;
+    }
+    .uri {
+      margin-top: 0.2rem;
+      font-size: 0.75rem;
+      color: var(--muted);
+      word-break: break-all;
+    }
+    footer {
+      margin-top: 2.5rem;
+      text-align: center;
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    @media (max-width: 600px) {
+      main {
+        padding-inline: 0.9rem;
+      }
+      .card {
+        padding-inline: 0.85rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Crypto Donations</h1>
+      <p class="tagline">Thank you for supporting the stream.</p>
+      <p class="note">
+        Double‑check the address and network before sending. 
+        <strong>Do not</strong> send from unsupported chains or to the wrong network.
+      </p>
+    </header>
+
+    <section class="grid">
+      <!-- Solana -->
+      <article class="card">
+        <div class="card-header">
+          <div class="card-title">Solana</div>
+          <div class="network-pill">SOL · Solana</div>
+        </div>
+        <div class="addr-label">Address</div>
+        <div class="address">
+          Gwx9eW282udQsPc8ezCs431XSx3oEUuUrzSd1p1b4XzX
+        </div>
+        <div class="qr-wrap">
+          <img src="sol-qr.png" alt="Solana donation QR code">
+        </div>
+        <div class="uri">
+          URI: solana:Gwx9eW282udQsPc8ezCs431XSx3oEUuUrzSd1p1b4XzX
+        </div>
+      </article>
+
+      <!-- Ethereum -->
+      <article class="card">
+        <div class="card-header">
+          <div class="card-title">Ethereum</div>
+          <div class="network-pill">ETH · Ethereum</div>
+        </div>
+        <div class="addr-label">Address</div>
+        <div class="address">
+          0x398358dF00D9310d86246349d398af5Dc76b4B2a
+        </div>
+        <div class="qr-wrap">
+          <img src="eth-qr.png" alt="Ethereum donation QR code">
+        </div>
+        <div class="uri">
+          URI: ethereum:0x398358dF00D9310d86246349d398af5Dc76b4B2a
+        </div>
+      </article>
+
+      <!-- Bitcoin -->
+      <article class="card">
+        <div class="card-header">
+          <div class="card-title">Bitcoin</div>
+          <div class="network-pill">BTC · Bitcoin</div>
+        </div>
+        <div class="addr-label">Address</div>
+        <div class="address">
+          bc1q8n8n5ee688r0z6qs5s5yavmwgyxt27lwhlawmw
+        </div>
+        <div class="qr-wrap">
+          <img src="bit-qr.png" alt="Bitcoin donation QR code">
+        </div>
+        <div class="uri">
+          URI: bitcoin:bc1q8n8n5ee688r0z6qs5s5yavmwgyxt27lwhlawmw
+        </div>
+      </article>
+
+      <!-- Monad -->
+      <article class="card">
+        <div class="card-header">
+          <div class="card-title">Monad</div>
+          <div class="network-pill">MON · EVM (Monad)</div>
+        </div>
+        <div class="addr-label">Address</div>
+        <div class="address">
+          0x398358dF00D9310d86246349d398af5Dc76b4B2a
+        </div>
+        <div class="qr-wrap">
+          <img src="mon-qr.png" alt="Monad donation QR code">
+        </div>
+        <div class="uri">
+          EVM address (same as ETH): 0x398358dF00D9310d86246349d398af5Dc76b4B2a
+        </div>
+      </article>
+
+      <!-- Base -->
+      <article class="card">
+        <div class="card-header">
+          <div class="card-title">Base</div>
+          <div class="network-pill">BASE · EVM (Base)</div>
+        </div>
+        <div class="addr-label">Address</div>
+        <div class="address">
+          0x398358dF00D9310d86246349d398af5Dc76b4B2a
+        </div>
+        <div class="qr-wrap">
+          <img src="bas-qr.png" alt="Base donation QR code">
+        </div>
+        <div class="uri">
+          EVM address (same as ETH): 0x398358dF00D9310d86246349d398af5Dc76b4B2a
+        </div>
+      </article>
+
+      <!-- Sui -->
+      <article class="card">
+        <div class="card-header">
+          <div class="card-title">Sui</div>
+          <div class="network-pill">SUI · Sui</div>
+        </div>
+        <div class="addr-label">Address</div>
+        <div class="address">
+          0x6d033073494678a4ebe5438c36ae39c9c5f1e82b871a4e108e78501fce6f2a38
+        </div>
+        <div class="qr-wrap">
+          <img src="sui-qr.png" alt="Sui donation QR code">
+        </div>
+      </article>
+
+      <!-- Polygon -->
+      <article class="card">
+        <div class="card-header">
+          <div class="card-title">Polygon</div>
+          <div class="network-pill">MATIC · Polygon</div>
+        </div>
+        <div class="addr-label">Address</div>
+        <div class="address">
+          0x398358dF00D9310d86246349d398af5Dc76b4B2a
+        </div>
+        <div class="qr-wrap">
+          <img src="pol-qr.png" alt="Polygon donation QR code">
+        </div>
+        <div class="uri">
+          EVM address (same as ETH): 0x398358dF00D9310d86246349d398af5Dc76b4B2a
+        </div>
+      </article>
+
+      <!-- HyperEVM -->
+      <article class="card">
+        <div class="card-header">
+          <div class="card-title">HyperEVM</div>
+          <div class="network-pill">HYP · EVM (HyperEVM)</div>
+        </div>
+        <div class="addr-label">Address</div>
+        <div class="address">
+          0x398358dF00D9310d86246349d398af5Dc76b4B2a
+        </div>
+        <div class="qr-wrap">
+          <img src="hyp-qr.png" alt="HyperEVM donation QR code">
+        </div>
+        <div class="uri">
+          EVM address (same as ETH): 0x398358dF00D9310d86246349d398af5Dc76b4B2a
+        </div>
+      </article>
+    </section>
+
+    <footer>
+      Built with GitHub Pages. Update this page whenever your addresses change.
+    </footer>
+  </main>
+</body>
+</html>
